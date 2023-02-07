@@ -39,6 +39,7 @@ const AddDoctors = () => {
             specialty: data.specialty,
             image: imgData.data.url,
           }
+          console.log(doctor)
 
           //save doctor information to the database 
           fetch('https://doctors-portal-server-kowsarahammd80.vercel.app/doctors', {
@@ -54,10 +55,12 @@ const AddDoctors = () => {
               console.log(result);
               toast.success(`${data.name} is added successfully`);
             })
+            .catch(e => console.error(e))
           navigate('/dashboard/managedoctors')
 
         }
       })
+      .catch(e => console.error(e))
   }
 
   if (isLoading) {

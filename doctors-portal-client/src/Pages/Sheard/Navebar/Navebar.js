@@ -30,8 +30,6 @@ const Navebar = () => {
       <Link to='/appointment'>Appointment</Link>
     </li>
 
-
-
     <li>
       <Link>Contact Us</Link>
     </li>
